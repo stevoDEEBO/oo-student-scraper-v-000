@@ -13,9 +13,8 @@ class Student
   end
 
   def self.create_from_collection(students_array)
-    students_array.each do |student|
-      @name = Scraper.scrape_index_page[:name]
-      @location = Scraper.scrape_index_page[:location]
+    students_array.each do |student_hash| self.new(student_hash)}
+      
     end
   end
 
