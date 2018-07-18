@@ -14,8 +14,8 @@ class Student
 
   def self.create_from_collection(students_array)
     students_array.each do |student|
-      #@name = Scraper?
-      #@location = Scraper?
+      @name = Scraper.scrape_index_page[name]
+      @location = Scraper.scrape_index_page[location]
     end
   end
 
